@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<style>
+
+    body, .div1, .div2, span {
+        position: relative;
+    }
+
+    body {
+        margin-left: 110px;
+    }
+
+    .div1 {
+        margin-left: 120px;
+    }
+
+    .div2 {
+        margin-left: 130px;
+    }
+
+    span {
+        margin-left: 140px;
+        display: block;
+    }
+    div.btn {
+        position: absolute;
+        top: 0;
+        height: 18px;
+        left: -18px;
+        width: 18px;
+        /*background-color: grey;*/
+        display: block;
+        text-align: center;
+    }
+
+
+
+
+
+</style>
+<body>body
+<div class="div1">div
+    <div class="div2">div
+        <span>INFO
+</span>
+    </div>
+</div>
+<script>
+    (function(){
+
+        function createBtn(parent){
+            var btn = document.createElement('div');
+            btn.innerText = '(-)';
+            btn.className = 'btn';
+            parent.appendChild(btn);
+            return btn;
+
+        }
+
+        function collapseBody(e){
+            var s = e.target.innerText;
+            if (s == '(-)' ){
+                //add hide class to this
+                document.getElementsByClassName('div1')[0].style.display = 'none';
+                e.target.innerText = '(+)';
+            }
+            else {
+                //add hide class to this
+                document.getElementsByClassName('div1')[0].style.display = 'block';
+                e.target.innerText = '(-)';
+            }
+        }
+
+        function collapse(e){
+
+            var s = e.target.innerText;
+            if (s == '(-)' ){
+                //add hide class to this
+                console.log(e.target.previousElementSibling);
+                e.target.previousElementSibling.style.display = 'none';
+                e.target.innerText = '(+)';
+            }
+            else {
+                //add hide class to this
+                e.target.previousElementSibling.style.display = 'block';
+                e.target.innerText = '(-)';
+            }
+
+
+
+        }
+
+        document.addEventListener('DOMContentLoaded', function(){
+            createBtn(document.body).addEventListener('click', collapseBody);
+            createBtn(document.body.firstElementChild).addEventListener('click', collapse);
+            createBtn(document.body.firstElementChild.firstElementChild).addEventListener('click', collapse);
+        });
+    })();
+</script>
+</body>
+</html>

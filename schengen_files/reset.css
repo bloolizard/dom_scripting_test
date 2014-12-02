@@ -1,0 +1,144 @@
+html, body,  span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.space{
+	clear: both;
+	display: block; 
+}
+
+.space.v_10{
+	padding:5px 0; 
+}
+
+.space.v_20{
+	padding:10px 0; 
+}
+
+.space.v_30{
+	padding:15px 0; 
+}
+
+.space.v_40{
+	padding:20px 0; 
+}
+
+.clear{
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}    
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+a{
+	outline: none;
+}
+
+.nopadding{
+	padding:0 !important;
+}
+
+.no-vertical-padding{
+	padding-top:0 !important;
+	padding-bottom:0 !important;
+}
+
+.no-horizontal-padding{
+	padding-left:0 !important;
+	padding-right:0 !important;
+}
+
+.nomargin{
+	margin:0 !important;
+}
+
+
+/*
+alignments
+*/
+
+.aligncenter{
+	display:block;
+	text-align:center; 
+	margin:0 auto 20px auto;
+}
+
+.alignleft{
+	float:left;
+	display: inline;
+}
+
+.alignright{
+	float:right;
+	display: inline;
+}
+
+em{
+	font-style: italic;
+}

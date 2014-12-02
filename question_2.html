@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+      span.highlight {
+          font-size: 1.2em;
+          font-weight: 800;
+          background-color: yellow;
+      }
+  </style>
+</head>
+<body>
+<input id="query" type="text"/>
+<div id="txtBox">here are six European Union member states that are not part of the Schengen area as well as state territories that are also not part of the Schengen agreement. Out of the six Schengen nonmember states, four of them are soon joining the Schengen area as is Bulgaria, Croatia, Cyprus and Romania while the other two, Ireland and the United Kingdom remain opt-out (In general, the law of the European Union is valid in all of the twenty-eight European Union member states. However, occasionally member states negotiate certain opt-outs from legislation or treaties of the European </div>
+<script>
+    (function(){
+        document.addEventListener('DOMContentLoaded', function(){
+            var query = document.getElementById('query');
+            var div = document.getElementById('txtBox');
+            var s = div.innerHTML;
+            query.addEventListener('input', function(){
+                var re = new RegExp(event.target.value);
+                var _s = s.replace(re, "<span class='highlight'>"+event.target.value+"</span>");
+                div.innerHTML = _s;
+            });
+        });
+    })();
+</script>
+</body>
+</html>
